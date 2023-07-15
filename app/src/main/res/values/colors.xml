@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="main">#FF9934</color>
+    255//138//61
+    <!--  당근마켓 주황 rgb코드 255.138.61-->
 </resources>
