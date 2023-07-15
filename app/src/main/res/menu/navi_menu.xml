@@ -3,22 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/homeFragment"
+        android:icon="@drawable/home_fragment_icon"
         android:title="홈"
-        android:icon="@drawable/ic_launcher_foreground"/>
+        android:enabled="true"
+        />
     <item
         android:id="@+id/townFragment"
+        android:icon="@drawable/town_fragment_icon"
         android:title="동네생활"
-        android:icon="@drawable/ic_launcher_foreground"/>
+        android:enabled="true"
+        />
     <item
         android:id="@+id/nearbyFragment"
         android:title="내근처"
-        android:icon="@drawable/ic_launcher_foreground"/>
+        android:icon="@drawable/nearby_fragment_icon"
+        android:enabled="true"/>
     <item
         android:id="@+id/chatFragment"
         android:title="채팅"
-        android:icon="@drawable/ic_launcher_foreground"/>
+        android:icon="@drawable/chat_fragment_icon"
+        android:enabled="true"/>
     <item
         android:id="@+id/mypageFragment"
         android:title="나의 당근"
-        android:icon="@drawable/ic_launcher_foreground"/>
+        android:icon="@drawable/mypage_fragment_icon"
+        android:enabled="true"/>
 </menu>
