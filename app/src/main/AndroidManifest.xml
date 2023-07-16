@@ -13,7 +13,10 @@
         android:theme="@style/Theme.Carrot_market"
         tools:targetApi="31">
         <activity
-            android:name=".InitActivity"
+            android:name=".sign.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sign.InitActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
