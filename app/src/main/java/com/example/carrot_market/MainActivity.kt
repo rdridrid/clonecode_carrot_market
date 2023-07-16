@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager
 import com.example.carrot_market.databinding.ActivityMainBinding
 
 //당근 마켓 클론 코딩
+//더미데이터 이용
 private const val TAG_HOME = "home_fragment" //홈
 private const val TAG_TOWN = "town_fragment" // 동네 생활
 private const val TAG_NEARBY = "nearby_fragment" // 내 근처
