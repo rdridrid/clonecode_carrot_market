@@ -23,9 +23,11 @@ class HomeListAdapter(private val List : ArrayList<homelistdata>) : RecyclerView
         val currentItem = List[position]
         holder.title.text = currentItem.title
         holder.txt.text = currentItem.text
+        holder.price.text = currentItem.price
     }
     class HomeViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val title : TextView = itemView.findViewById(R.id.homelisttitle)
         val txt : TextView = itemView.findViewById(R.id.homelisttxt)
+        val price : TextView = itemView.findViewById(R.id.homelistprice)
     }
 }

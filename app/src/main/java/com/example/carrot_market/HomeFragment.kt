@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.carrot_market.Adapters.HomeListAdapter
 import com.example.carrot_market.data.homelistdata
-import com.example.carrot_market.databinding.FragmentHomeBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,6 +31,7 @@ class HomeFragment : Fragment() {
 
     lateinit var homeitemtitle : Array<String>
     lateinit var homeitemtxt : Array<String>
+    lateinit var homeitemprice : Array<String>
     lateinit var homelist : Array<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,17 +41,16 @@ class HomeFragment : Fragment() {
         }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) { //뷰바인딩 사용하기
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dataInitialize()
         val layoutManager = LinearLayoutManager(context)
-        recyclerView = view.findViewById(R.id.homelistRecyclerView)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.setHasFixedSize(true)
+        recyclerView = view.findViewById(R.id.homelistRecyclerView) //리사이클러뷰 연결
+        recyclerView.layoutManager = layoutManager //
+        recyclerView.setHasFixedSize(true) //hasfixedsize가 false인경우 전체 레이아웃 재 설정
+        //리사이클러뷰의 크기가 고정된다는 것을 알려줌.
         adapter = HomeListAdapter(homelistArrayList)
-        recyclerView.adapter = adapter
-        /*val fragmentHomeBinding = FragmentHomeBinding.bind(view)
-        binding = fragmentHomeBinding*/
+        recyclerView.adapter = adapter //어댑터 연결
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -80,15 +79,25 @@ class HomeFragment : Fragment() {
     private fun dataInitialize(){
         homelistArrayList = arrayListOf<homelistdata>()
         homeitemtitle = arrayOf(
-            "test",
-            "test2"
+            "사과 1박스 나눔합니다",
+            "기프티콘 팝니다",
+            "강아지 간식 팝니다.",
+            "고양이 장난감 팔아요"
         )
         homeitemtxt = arrayOf(
-            "test3",
-            "test4"
+            "중계 1동",
+            "남양주시 별내동",
+            "성북구 석관동",
+            "하계2동"
+        )
+        homeitemprice = arrayOf(
+            "나눔",
+            "12,000원",
+            "5,000원",
+            "8,000원"
         )
         for(i in homeitemtitle.indices){
-            val homelistitem = homelistdata(homeitemtitle[i],homeitemtxt[i])
+            val homelistitem = homelistdata(homeitemtitle[i],homeitemtxt[i],homeitemprice[i])
             homelistArrayList.add(homelistitem)
         }
     }
