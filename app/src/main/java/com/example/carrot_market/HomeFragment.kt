@@ -1,5 +1,6 @@
 package com.example.carrot_market
 
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -32,6 +33,7 @@ class HomeFragment : Fragment() {
     lateinit var homeitemtitle : Array<String>
     lateinit var homeitemtxt : Array<String>
     lateinit var homeitemprice : Array<String>
+    lateinit var homeitemimg : Array<Int>
     lateinit var homelist : Array<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -96,8 +98,16 @@ class HomeFragment : Fragment() {
             "5,000원",
             "8,000원"
         )
+        homeitemimg = arrayOf(
+            R.drawable.cat,
+            R.drawable.cat,
+            R.drawable.back,
+            R.drawable.back
+
+        )
+
         for(i in homeitemtitle.indices){
-            val homelistitem = homelistdata(homeitemtitle[i],homeitemtxt[i],homeitemprice[i])
+            val homelistitem = homelistdata(homeitemtitle[i],homeitemtxt[i],homeitemprice[i],homeitemimg[i])
             homelistArrayList.add(homelistitem)
         }
     }

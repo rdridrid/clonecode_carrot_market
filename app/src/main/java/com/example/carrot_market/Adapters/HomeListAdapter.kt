@@ -3,6 +3,7 @@ package com.example.carrot_market.Adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.carrot_market.R
@@ -24,10 +25,14 @@ class HomeListAdapter(private val List : ArrayList<homelistdata>) : RecyclerView
         holder.title.text = currentItem.title
         holder.txt.text = currentItem.text
         holder.price.text = currentItem.price
+        holder.img.clipToOutline = true
+        holder.img.setImageResource(currentItem.img)
+
     }
     class HomeViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val title : TextView = itemView.findViewById(R.id.homelisttitle)
         val txt : TextView = itemView.findViewById(R.id.homelisttxt)
         val price : TextView = itemView.findViewById(R.id.homelistprice)
+        val img : ImageView = itemView.findViewById(R.id.homelistimgview)
     }
 }
