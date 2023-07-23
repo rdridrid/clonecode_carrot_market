@@ -1,11 +1,13 @@
 package com.example.carrot_market.mypage
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.carrot_market.R
+import com.example.carrot_market.databinding.FragmentMypageBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +24,8 @@ class MypageFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var _binding: FragmentMypageBinding? = null //바인딩 변수 재 선언(null 확인)
+    private val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -35,7 +39,14 @@ class MypageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mypage, container, false)
+        _binding = FragmentMypageBinding.inflate(inflater,container,false)
+        binding.mypageprofileenter.setOnClickListener {
+            activity?.let{ //함수를 호출한 객체를 인자로 받음.
+                val intent = Intent(context, mypageProfile::class.java)
+                startActivity(intent)
+            }
+        }
+        return binding.root
     }
 
     companion object {
