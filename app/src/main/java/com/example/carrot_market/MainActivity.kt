@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.carrot_market.databinding.ActivityMainBinding
+import com.example.carrot_market.mypage.MypageFragment
 
 //당근 마켓 클론 코딩
 //더미데이터 이용
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.townFragment -> setFragment(TAG_TOWN, TownFragment())
                 R.id.nearbyFragment -> setFragment(TAG_NEARBY, NearbyFragment())
                 R.id.chatFragment -> setFragment(TAG_CHAT, ChatFragment())
-                R.id.mypageFragment -> setFragment(TAG_MYPAGE,MypageFragment())
+                R.id.mypageFragment -> setFragment(TAG_MYPAGE, MypageFragment())
             }
             true
         }
