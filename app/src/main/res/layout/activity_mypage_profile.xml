@@ -242,13 +242,15 @@
             android:id="@+id/button17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="start"
+            android:background="@color/white"
+            android:gravity="center|start"
             android:text="판매 상품" />
 
         <Button
             android:id="@+id/button18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:gravity="center|start"
             android:text="받은 매너 평가" />
 
@@ -256,6 +258,7 @@
             android:id="@+id/button19"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:gravity="center|start"
             android:text="받은 거래 후기" />
     </LinearLayout>
