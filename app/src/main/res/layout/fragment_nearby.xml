@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,9 +16,13 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/linearLayout6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -29,8 +34,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableTop="@drawable/outline_cloud_24"
                         android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
                         android:text="알바" />
 
                     <Button
@@ -38,21 +43,28 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="중고차 직거래" />
 
                     <Button
                         android:id="@+id/button31"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="부동산 직거래" />
 
                     <Button
                         android:id="@+id/button32"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="농수산물" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -65,35 +77,301 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="음식점" />
 
                     <Button
                         android:id="@+id/button34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="카페ㆍ디저트" />
 
                     <Button
                         android:id="@+id/button35"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="운동" />
 
                     <Button
                         android:id="@+id/button36"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button" />
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="뷰티샵" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"></LinearLayout>
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="인테리어시공" />
+
+                    <Button
+                        android:id="@+id/button38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="과외ㆍ클래스" />
+
+                    <Button
+                        android:id="@+id/button39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="미용실" />
+
+                    <Button
+                        android:id="@+id/nearbymovebtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/baseline_expand_circle_down_24"
+                        android:text="더보기" />
+                </LinearLayout>
+
             </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/hidden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+                <LinearLayout
+                    android:id="@+id/hidden1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="수리" />
+
+                    <Button
+                        android:id="@+id/button42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="청소" />
+
+                    <Button
+                        android:id="@+id/button43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="세탁소" />
+
+                    <Button
+                        android:id="@+id/button44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="취미" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hidden2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/hidden1">
+
+                    <Button
+                        android:id="@+id/button45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="학원" />
+
+                    <Button
+                        android:id="@+id/button46"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="육아" />
+
+                    <Button
+                        android:id="@+id/button48"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="병원ㆍ약국" />
+
+                    <Button
+                        android:id="@+id/button47"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00ff0000"
+                        android:drawableTop="@drawable/outline_cloud_24"
+                        android:text="반려동물" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/expandlessbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="162dp"
+                    android:layout_marginEnd="161dp"
+                    android:background="#00ff0000"
+                    android:drawableRight="@drawable/baseline_expand_less_24"
+                    android:text="접기"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hidden2" />
+
+                <Button
+                    android:id="@+id/button40"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/material_dynamic_primary95"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="로마부터 발리까지! 300만원\n받는 낭만 알바 모집중"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/expandlessbtn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="15dp"
+                android:background="#888888"
+                app:layout_constraintTop_toBottomOf="@+id/hidden" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:paddingLeft="15dp"
+                android:text="오늘의 인기 알바"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView19">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button49"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:text="Button" />
+
+                    <Button
+                        android:id="@+id/button51"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:text="Button" />
+
+                    <Button
+                        android:id="@+id/button54"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:text="Button" />
+
+                    <Button
+                        android:id="@+id/button53"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:text="Button" />
+
+                    <Button
+                        android:id="@+id/button52"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:text="Button" />
+
+                    <Button
+                        android:id="@+id/button50"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:text="Button" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="걸어서 갈 수 있는 동네 알바"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
 </FrameLayout>

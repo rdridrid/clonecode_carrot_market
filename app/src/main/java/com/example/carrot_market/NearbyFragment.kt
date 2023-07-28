@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.carrot_market.databinding.FragmentMypageBinding
+import com.example.carrot_market.databinding.FragmentNearbyBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +23,9 @@ class NearbyFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var _binding: FragmentNearbyBinding? = null //binding? null check해제
+    private val binding get() = _binding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,7 +39,23 @@ class NearbyFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nearby, container, false)
+        _binding = FragmentNearbyBinding.inflate(inflater,container,false)
+        binding.hidden.visibility = View.GONE
+        binding.nearbymovebtn.setOnClickListener {
+            if(binding.hidden.visibility==View.GONE){
+                binding.hidden.visibility = View.VISIBLE
+                binding.nearbymovebtn.setText("이사ㆍ용달")
+                //binding.nearbymovebtn.setBackgroundResource(R.drawable.baseline_king_bed_24)
+            } else{
+                //용달관련 기능실행
+            }
+        }
+        binding.expandlessbtn.setOnClickListener {
+            binding.nearbymovebtn.setText("더보기")
+            binding.hidden.visibility = View.GONE
+            //binding.nearbymovebtn.setBackgroundResource(R.drawable.baseline_expand_circle_down_24)
+        }
+        return binding.root
     }
 
     companion object {
