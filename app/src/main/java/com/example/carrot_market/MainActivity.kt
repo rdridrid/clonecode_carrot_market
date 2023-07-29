@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.carrot_market.databinding.ActivityMainBinding
+import com.example.carrot_market.home.HomeFragment
 import com.example.carrot_market.mypage.MypageFragment
 
 //당근 마켓 클론 코딩

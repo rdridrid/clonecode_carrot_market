@@ -15,7 +15,6 @@ class HomeListAdapter(private val List : ArrayList<homelistdata>) : RecyclerView
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.home_list_item, parent,false)
         return HomeViewHolder(itemView)
     }
-
     override fun getItemCount(): Int {
         return List.size
     }
